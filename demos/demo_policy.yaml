@@ -1,0 +1,24 @@
+version: "1.0.0"
+description: "AgentGuard demo policy -- covers approval, loop detection, and budget exhaustion"
+
+rules:
+  - name: approve_wire_transfer
+    tool: wire_transfer
+    action: require_approval
+    reason: "Wire transfers require human authorization before executing"
+
+  - name: deny_delete_customer
+    tool: delete_customer
+    action: deny
+    reason: "Deleting customers is never permitted by agents"
+
+budget:
+  max_tool_calls: 3
+
+loop_detection:
+  enabled: true
+  max_repetitions: 3
+  window_size: 6
+
+defaults:
+  unmatched_tool: allow
