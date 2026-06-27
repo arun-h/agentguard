@@ -40,14 +40,9 @@ rules:
 ## How It Works
 
 ```mermaid
-graph TD
-    A[Agent Framework] --> B[AgentGuard Interceptor]
-    B --> C[Policy + Budget + Loop Checks]
-    C -->|ALLOW| D[Tool Executes]
-    C -->|DENY| E[Blocked + Audit Logged]
-    C -->|REQUIRE_APPROVAL| F[Execution Interrupted]
-    F -->|Approved| D
-    F -->|Rejected| E
+flowchart TD
+    A --> B
+    B --> C
 ```
 
 Policy is plain YAML, evaluated deterministically—same input, same policy version, same output, every time.
