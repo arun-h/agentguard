@@ -42,10 +42,10 @@ rules:
 <p align="center">
   <img src="docs/images/how-it-works.png"
        alt="AgentGuard runtime overview"
-       width="850">
+       width="700">
 </p>
 
-Policy is plain YAML, evaluated deterministically—same input, same policy version, same output, every time.
+Policy is plain YAML, evaluated deterministically same input, same policy version, same output, every time.
 
 Every decision is deterministic: no network calls, no model inference, and no heuristic risk scoring.
 
@@ -57,19 +57,19 @@ For the complete runtime decision flow, execution precedence, approval lifecycle
 
 ## Why Runtime Governance, Not Observability
 
-An agent doesn't need to be malicious to call `delete_customer` with the wrong ID, retry a failing tool twenty times, or send an email to thousand people because a prompt was ambiguous. Tracing tools will show you this happened, with a beautifully rendered timeline, after the damage is done. That's observability—it answers "what happened," not "should this happen?"
+An agent doesn't need to be malicious to call `delete_customer` with the wrong ID, retry a failing tool twenty times, or send an email to thousand people because a prompt was ambiguous. Tracing tools will show you this happened, with a beautifully rendered timeline, after the damage is done. That's observability-it answers "what happened," not "should this happen?"
 
 | | Observability | Runtime Governance |
 |---|---|---|
 | Acts | After execution | Before execution |
 | Answers | "What happened?" | "Should this happen?" |
 
-AgentGuard focuses on the second problem. LangSmith and similar tools focus on the first—they're complementary, not competing. If your problem is "I don't know what my agent did," that's observability. If it's "I need to guarantee my agent cannot do X," that's this.
+AgentGuard focuses on the second problem. LangSmith and similar tools focus on the first, they're complementary, not competing. If your problem is "I don't know what my agent did," that's observability. If it's "I need to guarantee my agent cannot do X," that's this.
 
 
 ## See It Run
 
-This is real, runnable code—try it with `python demos/demo.py`. No API key or network access is required.
+This is real, runnable code try it with `python demos/demo.py`. No API key or network access is required.
 
 ```text
 $ python demos/demo.py
@@ -107,7 +107,7 @@ Demonstrating a permanently denied tool: delete_customer
 DENIED outright. Reason: Deleting customers is never permitted by agents
 ```
 
-Two more scenarios—loop detection and budget exhaustion—follow in the same script.
+Two more scenarios- loop detection and budget exhaustion follow in the same script.
 
 
 ## Design Goals
@@ -135,7 +135,7 @@ Two more scenarios—loop detection and budget exhaustion—follow in the same s
 | • | OpenAI Agents SDK adapter |
 | • | Policy testing framework |
 
-A handful of real bugs were found and fixed by running the test suite against real code rather than by inspection alone — a policy-reload race condition, a foreign-key handling gap, and an argument-binding order bug that made approval idempotency depend on positional vs. keyword calling style. All fixed, each with a dedicated regression test.
+A handful of real bugs were found and fixed by running the test suite against real code rather than by inspection alone - a policy-reload race condition, a foreign-key handling gap, and an argument-binding order bug that made approval idempotency depend on positional vs. keyword calling style. All fixed, each with a dedicated regression test.
 
 ---
 
@@ -178,7 +178,7 @@ Further-out items (multi-step approval chains, risk scoring, governance reports)
 
 ## Contributing
 
-Early-stage; core interfaces are still settling. Open an issue before a PR — the approval/audit layer has non-obvious correctness requirements (idempotency, concurrent writes) that are easy to get subtly wrong.
+Early-stage; core interfaces are still settling. Open an issue before a PR - the approval/audit layer has non-obvious correctness requirements (idempotency, concurrent writes) that are easy to get subtly wrong.
 
 ## License
 

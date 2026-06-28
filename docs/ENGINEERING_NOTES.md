@@ -12,7 +12,7 @@ The instinct early on was "wrap the tool call, check it against rules, that's it
 
 After the MVP started taking shape, the idea came up to expand AgentGuard into something that tracks full agent activity, runs evaluations across models, has a dashboard, scores accuracy, etc. basically LangSmith. On paper a lot of that sounded reasonable. Some of it I'd even want as a user.
 
-Several ideas sounded genuinely useful—dashboards, evaluation reports, prompt tracing, LLM-generated explanations. I almost convinced myself to build them.
+Several ideas sounded genuinely useful dashboards, evaluation reports, prompt tracing, LLM-generated explanations. I almost convinced myself to build them.
 
 I eventually reduced every feature request to one question:
 Does this strengthen runtime governance?
@@ -179,7 +179,7 @@ I'm deliberately leaving these unresolved instead of pretending the MVP is perfe
 
 The biggest thing I'd change is introducing the adapter layer earlier. Most of the governance architecture stabilized quickly; validating it against a real framework would probably have uncovered integration issues sooner.
 
-The other thing I'd do earlier is write more end-to-end tests. Most of the interesting bugs weren't inside individual components—they appeared only when several pieces interacted.
+The other thing I'd do earlier is write more end-to-end tests. Most of the interesting bugs weren't inside individual components they appeared only when several pieces interacted.
 
 One thing I noticed while building AgentGuard is that most of the difficult problems weren't algorithmic.
 
