@@ -1,7 +1,9 @@
 """
 All AgentGuard exception types.
 
-Reference: EDS Section 4.1.5 (Exception Types), Section 9.1 (Error Handling Matrix).
+Reference:
+- EDS §5.1.5 — Tool Interception: Exception Types
+- EDS §10 — Error Handling
 """
 from __future__ import annotations
 

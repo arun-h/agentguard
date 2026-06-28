@@ -1,7 +1,8 @@
 """
 Budget tracking models.
 
-Reference: EDS Section 4.5 (Feature 5: Budget Controls).
+Reference:
+- EDS §5.5 — Budget Controls
 """
 from __future__ import annotations
 

@@ -1,8 +1,6 @@
 """
 Tests for agentguard.policy.models.PolicyConfig.from_dict.
 
-Each test maps directly to one of the 10 validation rules in
-EDS Section 4.2.3.
 """
 from __future__ import annotations
 

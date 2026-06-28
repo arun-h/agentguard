@@ -1,9 +1,9 @@
 """
 SQLite schema for AgentGuard.
 
-Reference: EDS Section 5.3 (Complete Schema).
+Reference:
+- EDS §6.2 — SQLite Storage: Database Schema
 """
-
 SCHEMA_VERSION = 1
 
 CREATE_MIGRATIONS_TABLE = """

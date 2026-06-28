@@ -1,6 +1,10 @@
 """
 Tests for agentguard.decisions.engine.DecisionEngine.
 
+Reference:
+- EDS §5.7 — Decision Engine
+- EDS §5.7.1 — Decision Arbitration Order
+
 Covers:
 - Policy DENY short-circuits before budget/loop checks
 - Budget exceeded overrides ALLOW and REQUIRE_APPROVAL to DENY

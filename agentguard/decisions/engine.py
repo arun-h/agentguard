@@ -2,7 +2,9 @@
 Decision Engine: combines Policy Engine, Budget Tracker, and Loop Detector
 output into a single final PolicyDecision.
 
-Reference: EDS Section 4.5.4 (Enforcement Strategy) for the exact ordering:
+Reference:
+- EDS §5.7 — Decision Engine
+- EDS §5.7.1 — Decision Arbitration Order
 
     1. Policy Engine evaluates rules -> ALLOW, DENY, or REQUIRE_APPROVAL
     2. If result is DENY -> return DENY immediately, no budget/loop check
@@ -14,7 +16,7 @@ This ordering means budget/loop enforcement OVERRIDES REQUIRE_APPROVAL.
 A tool that would normally require human approval is denied outright if
 the run's budget is exhausted or a loop is detected -- this prevents an
 agent from escalating to approval as a way of bypassing budget/loop
-limits (EDS 4.5.4 note).
+limits (EDS §5.7.1).
 
 CONCURRENCY FIX (post-review):
 evaluate() previously read self._policy_engine.policy TWICE per call --
@@ -25,7 +27,7 @@ the TWO reads together were not atomic as a pair. A reload() landing
 between them could mean the matched rule came from policy version N
 while the budget/loop thresholds applied came from version N+1 --
 silently breaking the "decision is fully explained by one policy_version"
-guarantee.
+guarantee described in EDS §5.7.2.
 
 Fix: capture exactly one PolicyConfig snapshot at the top of evaluate(),
 via a single property read, and use that same snapshot object for rule

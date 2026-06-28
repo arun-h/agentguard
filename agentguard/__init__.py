@@ -1,7 +1,10 @@
 """
 AgentGuard: runtime governance middleware for AI agents.
 
-Public API surface. Reference: EDS Section 7.6.
+Public API surface.
+
+Reference:
+- EDS §8.1 — Public API: Construction
 """
 from agentguard.core import AgentGuard
 from agentguard.exceptions import (

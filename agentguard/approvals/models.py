@@ -1,7 +1,8 @@
 """
 Approval workflow models.
 
-Reference: EDS Section 4.3.2 (Approval Lifecycle - State Machine).
+Reference:
+- EDS §5.3.1 — Approval Workflow: Lifecycle
 
 State machine (no backward transitions, all terminal states are final):
 

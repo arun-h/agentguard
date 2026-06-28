@@ -1,8 +1,9 @@
 """
 AgentGuard: the public-facing entry point.
 
-Reference: EDS Section 7 (Public API Design), Section 7.6 (AgentGuard
-Class - Primary Interface).
+Reference:
+- EDS §8 — Public API
+- EDS §8.1 — Public API: Construction
 
 This module constructs every subsystem exactly once per AgentGuard
 instance and exposes the friendly decorator/wrapper API described in

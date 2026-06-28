@@ -1,8 +1,10 @@
 """
 Audit Logger: append-only persistence of every governance decision.
 
-Reference: EDS Section 4.4 (Feature 4: Audit Logging), Section 4.4.3
-(Audit Immutability Contract), Section 4.4.5 (Query Patterns).
+Reference:
+- EDS §5.4 — Audit Logging
+- EDS §5.4.1 — Audit Logging: Immutability Contract
+- EDS §5.4.2 — Audit Logging: Query Patterns
 
 IMMUTABILITY CONTRACT: this class deliberately exposes NO update or
 delete method anywhere in its public surface. Immutability is enforced

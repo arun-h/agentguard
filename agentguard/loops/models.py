@@ -1,7 +1,8 @@
 """
 Loop detection result model.
 
-Reference: EDS Section 4.6 (Feature 6: Loop Detection).
+Reference:
+- EDS §5.6 — Loop Detection
 """
 from __future__ import annotations
 

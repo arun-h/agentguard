@@ -3,11 +3,14 @@ Interceptor: the core tool-call interception logic.
 
 This is the engine behind AgentGuard.tool() / AgentGuard.wrap(). It wires
 together every other subsystem (DecisionEngine, ApprovalManager,
-AuditLogger) into the single per-call sequence described across EDS
-Sections 4.1, 4.3, and 4.4.
+AuditLogger) into the single per-call execution sequence defined by the
+AgentGuard runtime.
 
-Reference: EDS Section 4.1 (Feature 1: Tool Interception), Section 4.3.3
-(Approval Request Creation), Section 4.3.4 (Idempotency).
+Reference:
+- EDS §5.1 — Tool Interception
+- EDS §5.3.2 — Approval Workflow: Idempotency
+- EDS §5.4 — Audit Logging
+- EDS §5.7 — Decision Engine
 """
 from __future__ import annotations
 

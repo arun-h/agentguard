@@ -1,14 +1,14 @@
 """
 Loop Detector: per-run pattern detection for repeated tool calls.
 
-Reference: EDS Section 4.6.3 (Algorithm - Immediate Repetition),
-4.6.4 (Algorithm - Alternating Cycle).
+Reference:
+- EDS §5.6 — Loop Detection
+- EDS §7.5 — Run Isolation, Concurrency, and Thread Safety: Durability — Explicit Asymmetry
 
-IMPORTANT (EDS 4.6.4b / 9.3): Loop detection history lives only in
-process memory. It is NOT persisted to SQLite. A process restart loses
-all call history for every run. Do not rely on loop detection as a hard
-safety boundary in environments where process restarts can happen
-mid-run.
+IMPORTANT: Loop detection history lives only in process memory. It is NOT
+persisted to SQLite. A process restart loses all call history for every
+run. Do not rely on loop detection as a hard safety boundary in
+environments where process restarts can happen mid-run.
 """
 from __future__ import annotations
 

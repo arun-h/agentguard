@@ -1,8 +1,9 @@
 """
 Policy configuration data models and validation.
 
-Reference: EDS Section 4.2.2 (Policy File Format), Section 4.2.3
-(Policy Validation Rules).
+Reference:
+- EDS §5.2.1 — Policy Engine: Policy File Format
+- EDS §5.2.2 — Policy Engine: Validation Rules
 """
 from __future__ import annotations
 

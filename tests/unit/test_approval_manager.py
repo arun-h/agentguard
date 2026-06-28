@@ -8,7 +8,7 @@ Covers:
 - approve()/reject() transition PENDING -> terminal state
 - First-writer-wins under REAL concurrent threads (not just sequential calls)
 - Lazy expiration: a PENDING record past its TTL is found as EXPIRED
-- Terminal states never expire (EDS: only PENDING records can expire)
+- Terminal states never expire (see EDS §5.3.3 — Approval Workflow: Expiration)
 - Duplicate create_approval() for the same composite key raises (UNIQUE constraint)
 """
 from __future__ import annotations

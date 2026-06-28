@@ -2,7 +2,10 @@
 Policy Engine: loads policy YAML, validates it, and evaluates rules
 against incoming tool calls.
 
-Reference: EDS Section 4.2 (Feature 2: Policy Engine).
+Reference:
+- EDS §5.2 — Policy Engine
+- EDS §5.2.3 — Policy Engine: Loading and Hot-Reload
+- EDS §5.2.4 — Policy Engine: Evaluation Algorithm and the evaluate_against() Split
 """
 from __future__ import annotations
 

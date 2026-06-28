@@ -1,8 +1,10 @@
 """
 Budget Tracker: per-run accumulation and limit enforcement.
 
-Reference: EDS Section 4.5.5 (Run Isolation), 4.5.6 (Reset Behavior),
-4.5.7 (Concurrency Handling / Durability Warning).
+Reference:
+- EDS §5.5 — Budget Controls
+- EDS §7.1 — Run Isolation, Concurrency, and Thread Safety: Isolation by Subsystem
+- EDS §7.5 — Run Isolation, Concurrency, and Thread Safety: Durability — Explicit Asymmetry
 """
 from __future__ import annotations
 

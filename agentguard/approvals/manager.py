@@ -1,10 +1,12 @@
 """
 Approval Manager: idempotent approval requests, lifecycle state machine,
 expiration, and conflict-safe resolution.
+Reference:
+- EDS §5.3 — Approval Workflow
+- EDS §5.3.2 — Approval Workflow: Idempotency
+- EDS §5.3.3 — Approval Workflow: Expiration
+- EDS §5.3.4 — Approval Workflow: Conflict Resolution
 
-Reference: EDS Section 4.3 (Feature 3: Approval Workflow), Section 4.3.4
-(Idempotency), Section 4.3.5 (Expiration), OQ-5 (Concurrent Approval
-Update Race -- RESOLVED as first-writer-wins).
 """
 from __future__ import annotations
 

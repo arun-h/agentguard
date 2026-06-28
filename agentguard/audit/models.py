@@ -1,8 +1,9 @@
 """
 Audit record model.
 
-Reference: EDS Section 4.4.2 (Audit Record Schema), Section 5.3
-(audit_log table definition).
+Reference:
+- EDS §3.5 — Core Data Models: AuditRecord
+- EDS §6.2 — SQLite Storage: Database Schema
 """
 from __future__ import annotations
 

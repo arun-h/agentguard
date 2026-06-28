@@ -1,10 +1,12 @@
 """
 Execution context construction and run_id propagation.
 
-Reference: EDS Section 3.3 (ExecutionContext), Section 4.1.4 (Missing run_id
-Handling / strict_run_id), Section 7.7 (run_id Propagation).
+Reference:
+- EDS §3.1 — Core Data Models: ExecutionContext
+- EDS §3.2 — Core Data Models: run_id Resolution
+- EDS §5.1.3 — Tool Interception: Missing run_id Handling
 
-Resolution order for run_id, per EDS 7.7:
+Resolution order for run_id, per EDS §3.2:
     explicit keyword argument > ContextVar > thread-local > synthetic fallback
 """
 from __future__ import annotations

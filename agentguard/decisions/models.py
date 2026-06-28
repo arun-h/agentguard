@@ -1,7 +1,8 @@
 """
 Decision output types.
 
-Reference: EDS Section 3.4 (PolicyDecision Object).
+Reference:
+- EDS §3.3 — Core Data Models: PolicyDecision
 """
 from __future__ import annotations
 

@@ -1,7 +1,8 @@
 """
 Thread-local SQLite connection management.
 
-Reference: EDS Section 5.5 (SQLite Connection Strategy).
+Reference:
+- EDS §6.1 — SQLite Storage: Connection Strategy
 
 CRITICAL: A single sqlite3.Connection must never be shared across threads.
 This module enforces one connection per thread via threading.local(), with

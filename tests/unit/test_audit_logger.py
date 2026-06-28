@@ -6,8 +6,9 @@ Covers:
 - Optional fields (approval_id, budget_*, loop_count) default to None
   and are correctly persisted when supplied
 - metadata dict round-trips through JSON correctly
-- All query patterns from EDS 4.4.5: by run_id, by decision, by tool_name,
-  approval events for a run, decision counts
+- All query patterns from EDS §5.4.2 — Audit Logging: Query Patterns:
+  by run_id, by decision, by tool_name, approval events for a run,
+  and decision counts
 - Immutability-by-absence: AuditLogger has no update/delete method at all
 - Insertion order is preserved in query results
 """

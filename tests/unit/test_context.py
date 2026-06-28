@@ -2,7 +2,8 @@
 Tests for agentguard.context.
 
 Covers:
-- run_id resolution order (explicit > ContextVar > thread-local > synthetic)
+- run_id resolution order (see EDS §3.2 — Core Data Models: run_id Resolution):
+  explicit > ContextVar > thread-local > synthetic
 - strict_run_id raising MissingRunIdError
 - arguments_hash determinism and sorted-key canonicalization
 - ExecutionContext.build() end-to-end
