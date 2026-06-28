@@ -4,9 +4,8 @@ This document describes the internal runtime architecture, decision precedence, 
 
 ## Runtime Decision Flow
 
-
-```mermaid
-flowchart TD
-    A --> B
-    B --> C
-```
+<p align="center">
+  <img src="images/runtime-decision-flow.png"
+       alt="Runtime decision flow"
+       width="900">
+</p>

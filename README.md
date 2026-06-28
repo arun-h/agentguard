@@ -39,11 +39,11 @@ rules:
 
 ## How It Works
 
-```mermaid
-flowchart TD
-    A --> B
-    B --> C
-```
+<p align="center">
+  <img src="docs/images/how-it-works.png"
+       alt="AgentGuard runtime overview"
+       width="850">
+</p>
 
 Policy is plain YAML, evaluated deterministically—same input, same policy version, same output, every time.
 
